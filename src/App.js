@@ -15,12 +15,6 @@ const [count, setCount ] = React.useState(0)
   return (
     <div className="App">
 
-      <div>
-        <h2>Счетчик:</h2>
-        <h1>{count}</h1>
-        <button onClick={onclickMinus} className="minus">- Минус</button>
-        <button onClick={onclickPlus} className="plus">Плюс +</button>
-      </div>
     </div>
   );
 }
