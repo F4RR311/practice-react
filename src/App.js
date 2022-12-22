@@ -1,13 +1,25 @@
 import './index.scss';
+import React from "react";
 
 function App() {
+const [count, setCount ] = React.useState(0)
+
+    const onclickPlus = () =>{
+        setCount(count +1)
+    }
+
+    const onclickMinus = () =>{
+        setCount(count -1)
+    }
+
   return (
     <div className="App">
+
       <div>
         <h2>Счетчик:</h2>
-        <h1>0</h1>
-        <button className="minus">- Минус</button>
-        <button className="plus">Плюс +</button>
+        <h1>{count}</h1>
+        <button onClick={onclickMinus} className="minus">- Минус</button>
+        <button onClick={onclickPlus} className="plus">Плюс +</button>
       </div>
     </div>
   );
